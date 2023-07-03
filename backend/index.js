@@ -15,10 +15,17 @@ app.use(express.json());
 app.use(cors());
 
 // Configuración de rutas
+<<<<<<< HEAD
 const routes = require('./routes/envios');
 app.use('/', routes);
 
 const routes2 = require('./routes/usuarios');
+=======
+const routes = require('./routes/articulos');
+app.use('/', routes);
+
+const routes2 = require('./routes/vendedores');
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
 app.use('/', routes2);
 
 // Inicio del servidor

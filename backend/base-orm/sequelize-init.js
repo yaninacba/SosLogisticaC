@@ -4,15 +4,26 @@ const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize("sqlite:" + process.env.base);
 
 
+<<<<<<< HEAD
 const envios = sequelize.define(
   "envios",
   {
     IdEnvio: {
+=======
+const articulos = sequelize.define(
+  "articulos",
+  {
+    IdArticulo: {
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
+<<<<<<< HEAD
     Calle: {
+=======
+    Nombre: {
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
       type: DataTypes.STRING(60),
       allowNull: false,
       validate: {
@@ -30,7 +41,11 @@ const envios = sequelize.define(
         msg: "este Nombre ya existe en la tabla!",
       },
     },
+<<<<<<< HEAD
     Numero: {
+=======
+    Precio: {
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: {
@@ -40,7 +55,11 @@ const envios = sequelize.define(
         }
       }
     },
+<<<<<<< HEAD
     CPostal: {
+=======
+    CodigoDeBarra: {
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
       type: DataTypes.STRING(13),
       allowNull: false,
       validate: {
@@ -54,7 +73,20 @@ const envios = sequelize.define(
         },
       },
     },
+<<<<<<< HEAD
 
+=======
+    Stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Stock es requerido",
+        }
+      }
+    },
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
     FechaAlta: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -65,13 +97,19 @@ const envios = sequelize.define(
         }
       }
     },
+<<<<<<< HEAD
 
     Zona: {
       type: DataTypes.STRING(13),
+=======
+    Activo: {
+      type: DataTypes.BOOLEAN,
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
       allowNull: false,
       validate: {
         notNull: {
           args: true,
+<<<<<<< HEAD
           msg: "Codigo De Barra es requerido",
         },
         is: {
@@ -88,6 +126,19 @@ const usuarios = sequelize.define(
     "usuarios",
     {
       IdUsuario: {
+=======
+          msg: "Activo es requerido",
+        }
+      }
+    },
+  },
+)
+
+const vendedores = sequelize.define(
+    "vendedores",
+    {
+      IdVendedores: {
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -159,6 +210,11 @@ const usuarios = sequelize.define(
 
 module.exports = {
   sequelize,
+<<<<<<< HEAD
   envios,
   usuarios,
+=======
+  articulos,
+  vendedores,
+>>>>>>> e835a45da833b608d3995f4e3ac0f0fecfa796ec
 };
