@@ -30,7 +30,7 @@ const Usuarios = () => {
       const confirmed = window.confirm('¿Estás seguro de eliminar el usuario?');
       if (confirmed) {
         await axios.delete(`http://localhost:4000/api/usuarios/${id}`);
-        const updatedList = lista.filter((envio) => usuario.id !== id);
+        const updatedList = lista.filter((usuario) => usuario.id !== id);
         setLista(updatedList);
       }
     } catch (error) {
@@ -66,7 +66,7 @@ const Usuarios = () => {
           </form>
         </div>
       </div>
-      {lista && <ListadoUsuarios lista={lista} />}
+      {lista && <ListadoUsuarios lista={lista} eliminarUsuari={eliminarUsuario} />}
     </div>
   );
 };

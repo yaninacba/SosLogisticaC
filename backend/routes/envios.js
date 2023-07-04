@@ -56,7 +56,7 @@ router.get("/api/envios", async function (req, res) {
   router.put("/api/envios/:id", async (req, res) => {
 
     try {
-      let item = await db.articulos.findOne({
+      let item = await db.envios.findOne({
         attributes: [
           "IdEnvio",
           "Calle",
@@ -127,12 +127,7 @@ router.get("/api/envios", async function (req, res) {
         }
       }
     }
-  });
-  
-  
-
-
-  
+  });  
   
 
 

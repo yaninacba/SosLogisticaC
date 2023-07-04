@@ -4,7 +4,7 @@ const ListadoUsuarios = ({ lista , eliminarUsuario, actualizarUsuario}) => {
   
   return (
     <div className="container mt-3">
-      <h1>Usuarios</h1>
+      <h3 style={{textAlign:'center'}}>Usuarios </h3>
       <table className="table table-striped">
         <thead>
           <tr>

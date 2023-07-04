@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import BuscarEnvio from './BuscarEnvio';
+import CrearEnvio from './CrearEnvio';
 
 
-const ListadoEnvios = ({ lista, eliminarEnvio , actualizarEnvio}) => {
+const ListadoEnvios = ({ lista, eliminarEnvio}) => {
+  const [mostrarBuscarEnvio, setMostrarBuscarEnvio] = useState(false);
+  const [envioSeleccionado, setEnvioSeleccionado] = useState(null);  
  
+  const ActualizarEnvio = (idEnvio) => {
+    setMostrarBuscarEnvio(true);
+    setEnvioSeleccionado(idEnvio);
+  };
 
-  
+
   return (
+  
     <div className="container mt-3">
-      <h1>Envios</h1>
+      <h2 style={{textAlign:'center'}}>Listado </h2>
+
+      <div>
+      <Link to="/CrearEnvio" className="btn btn-primary">Crear Envío</Link>
+      </div>
+    
+     
       <table className="table table-striped">
         <thead>
           <tr>
@@ -17,13 +33,12 @@ const ListadoEnvios = ({ lista, eliminarEnvio , actualizarEnvio}) => {
             <th>CPostal</th>
             <th>Fecha Alta</th>
             <th>Zona</th>
-        
-           
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           {lista.map((item) => (
-             <tr key={item.IdEnvio}>
+            <tr key={item.IdEnvio}>
               <td>{item.IdEnvio}</td>
               <td>{item.Calle}</td>
               <td>{item.Numero}</td>
@@ -31,16 +46,21 @@ const ListadoEnvios = ({ lista, eliminarEnvio , actualizarEnvio}) => {
               <td>{item.FechaAlta}</td>
               <td>{item.Zona}</td>
               <td>
-              <button onClick={() => eliminarEnvio(item.IdEnvio)}>Eliminar</button>
-             </td>
-             <td>
-              <button onClick={() => actualizarEnvio(item.IdEnvio)}>Actualizar></button>
-             </td>
+                <button onClick={() => eliminarEnvio(item.IdEnvio)}>Eliminar</button>
+                <button onClick={() => ActualizarEnvio(item.IdEnvio)}>Actualizar</button>
+              {mostrarBuscarEnvio && envioSeleccionado === item.IdEnvio && (
+                <BuscarEnvio idEnvio={item.IdEnvio} />
+              )}
+              </td>
+             
             </tr>
           ))}
         </tbody>
       </table>
+
     </div>
+
+ 
   );
 };
 

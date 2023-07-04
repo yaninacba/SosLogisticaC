@@ -67,7 +67,7 @@ export default function CrearEnvio({
             <div className="col-sm-8 col-md-6">
               <input
                 type="number" step=".01"
-                {...register("Precio", {
+                {...register("Numero", {
                   required: { value: true, message: "Numero es requerido" },
                   min: {
                     value: 0.01,
@@ -146,7 +146,7 @@ export default function CrearEnvio({
             <div className="col-sm-8 col-md-6">
               <input
                 type="number" step=".01"
-                {...register("Precio", {
+                {...register("Numero", {
                   required: { value: true, message: "Numero es requerido" },
                   min: {
                     value: 0.01,

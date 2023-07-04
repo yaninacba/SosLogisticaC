@@ -45,7 +45,7 @@ const Envios = () => {
 
   return (
     <div className="container">
-      <h1>Ruta Programada de Envios</h1>
+      <h1>Ruta de Envios</h1>
       <div className="card mb-3">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -65,6 +65,8 @@ const Envios = () => {
           <div>
           </div>
           </form>
+        
+          
         </div>
         {lista && <ListadoEnvios lista={lista} eliminarEnvio={eliminarEnvio} />}
         </div>

@@ -19,7 +19,7 @@ router.get("/api/usuarios", async function (req, res) {
   }
   if (req.query.activo != undefined && req.query.activo !== "") {
     // true o false en el modelo, en base de datos es 1 o 0
-    // convierto el string a booleano
+
     where.Activo = req.query.activo === "true";
   }
 

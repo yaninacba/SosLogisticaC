@@ -38,19 +38,13 @@ export default function BuscarEnvio ({Calle, setCalle, Numero, setNumero, Buscar
         {/* Botones */}
         <div className="row">
           <div className="col text-center botones">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={() => Buscar(1) }
-          >
-            <i className="fa fa-search"> </i> Buscar
-          </button>
+
           <button
             type="button"
             className="btn btn-primary"
             onClick={() => Agregar() }
           >
-            <i className="fa fa-plus"> </i> Agregar
+            <i className="fa fa-plus"> </i> Actualizar
           </button>
           </div>
         </div>
