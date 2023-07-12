@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import Usuarios from './components/Usuarios';
 import Envios from './components/Envios';
 import camioncito from './imagen/camioncito.JPG';
+import CrearEnvio from './components/CrearEnvio';
+import MenuEnvios from './components/MenuEnvios';
 
 
 
@@ -24,6 +26,8 @@ function App() {
         <Route path="/" element={<Inicio />} index />
         <Route path="/Envios" element={<Envios />} />
         <Route path="/Usuarios" element={<Usuarios />}/> 
+        <Route path="/CrearEnvio" element={<CrearEnvio />} />
+        <Route path="/MenuEnvios" element={<MenuEnvios/>} />
  
       
       </Routes>

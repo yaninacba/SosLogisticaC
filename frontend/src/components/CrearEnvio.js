@@ -1,230 +1,43 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React from 'react';
 
-export default function CrearEnvio({
-  AccionABMC,
-  Item,
-  Grabar,
-  Volver,
-}) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, touchedFields, isValid, isSubmitted },
-  } = useForm({ values: Item });
 
-  const onSubmit = (data) => {
-    Grabar(data);
-  };
-  if (!Item) return null;
+function CrearEnvio() {
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="container-fluid">
-
-        <fieldset disabled={AccionABMC === "C"}>
-
-          {/* campo nombre */}
-          <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="Nombre">
-                Calle<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="text"
-                {...register("Calle", {
-                  required: { value: true, message: "Calle es obligatorio" },
-                  minLength: {
-                    value: 4,
-                    message: "Calle debe tener al menos 4 caracteres",
-                  },
-                  maxLength: {
-                    value: 55,
-                    message: "Calle debe tener como máximo 30 caracteres",
-                  },
-                })}
-                autoFocus
-                className={
-                  "form-control " + (errors?.Calle ? "is-invalid" : "")
-                }
-              />
-              {errors?.Calle && touchedFields.Calle && (
-                <div className="invalid-feedback">
-                  {errors?.Calle?.message}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* campo Numero */}
-          <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="Precio">
-                Numero<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="number" step=".01"
-                {...register("Numero", {
-                  required: { value: true, message: "Numero es requerido" },
-                  min: {
-                    value: 0.01,
-                    message: "Numero debe ser mayor a 0",
-                  },
-                  max: {
-                    value: 99999.99,
-                    message: "Numero debe ser menor o igual a 99999.99",
-                  },
-                })}
-                className={
-                  "form-control " + (errors?.Numero ? "is-invalid" : "")
-                }
-              />
-              <div className="invalid-feedback">{errors?.Numero?.message}</div>
-            </div>
-          </div>
-
-          {/* campo Codigo postal */}
-          <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="Stock">
-                Codigo postal<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="number"
-                {...register("CPostal", {
-                  required: { value: true, message: "Codigo Postal es requerido" },
-                  min: {
-                    value: 0,
-                    message: "Codigo postal debe ser mayor a 0",
-                  },
-                  max: {
-                    value: 99999,
-                    message: "Cpostal debe ser menor o igual a 10000",
-                  },
-                })}
-                className={
-                  "form-control " + (errors?.CPostal ? "is-invalid" : "")
-                }
-              />
-              <div className="invalid-feedback">{errors?.CPostal?.message}</div>
-            </div>
-          </div>
-
-
-          {/* campo FechaAlta */}
-          <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="FechaAlta">
-                Fecha Alta<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="date"
-                {...register("FechaAlta", {
-                  required: { message: "Fecha Alta es requerido" }
-                })}
-                className={
-                  "form-control " + (errors?.FechaAlta ? "is-invalid" : "")
-                }
-              />
-              <div className="invalid-feedback">
-                {errors?.FechaAlta?.message}
-              </div>
-            </div>
-            <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="Precio">
-                Numero<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="number" step=".01"
-                {...register("Numero", {
-                  required: { value: true, message: "Numero es requerido" },
-                  min: {
-                    value: 0.01,
-                    message: "Numero debe ser mayor a 0",
-                  },
-                  max: {
-                    value: 99999.99,
-                    message: "Numero debe ser menor o igual a 99999.99",
-                  },
-                })}
-                className={
-                  "form-control " + (errors?.Numero ? "is-invalid" : "")
-                }
-              />
-              <div className="invalid-feedback">{errors?.Numero?.message}</div>
-            </div>
-          </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="Precio">
-                Zona<span className="text-danger">*</span>:
-              </label>
-            </div>
-            <div className="col-sm-8 col-md-6">
-              <input
-                type="number" step=".01"
-                {...register("Zona", {
-                  required: { value: true, message: "Zona es requerido" },
-                  min: {
-                    value: 0.01,
-                    message: "Zona debe ser mayor a 0",
-                  },
-                  max: {
-                    value: 99999.99,
-                    message: "Zona debe ser menor o igual a 99999.99",
-                  },
-                })}
-                className={
-                  "form-control " + (errors?.Zona ? "is-invalid" : "")
-                }
-              />
-              <div className="invalid-feedback">{errors?.Zona?.message}</div>
-            </div>
-          </div>
-
-
-        </fieldset>
-
-        {/* Botones Grabar, Cancelar/Volver' */}
-        <hr />
-        <div className="row justify-content-center">
-          <div className="col text-center botones">
-            {AccionABMC !== "C" && (
-              <button type="submit" className="btn btn-primary">
-                <i className="fa fa-check"></i> Grabar
-              </button>
-            )}
-            <button
-              type="button"
-              className="btn btn-warning"
-              onClick={() => Volver()}
-            >
-              <i className="fa fa-undo"></i>
-              {AccionABMC === "C" ? " Volver" : " Cancelar"}
-            </button>
+    <div>
+      <h4>Crear Envío</h4>
+      <form className="row g-3">
+        <div className="col-md-4">
+          <label htmlFor="validationDefault01" className="form-label">Destinatario</label>
+          <input type="text" className="form-control" id="validationDefault01" value="Mark" required />
+        </div>
+        <div className="col-md-4">
+          <label htmlFor="validationDefault02" className="form-label">Calle</label>
+          <input type="text" className="form-control" id="validationDefault02" value="Otto" required />
+        </div>
+        <div className="col-md-3">
+          <label htmlFor="validationDefaultUsername" className="form-label">Numero</label>
+          <div className="input-group">
+            <input type="number" className="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required />
           </div>
         </div>
-
-        {/* texto: Revisar los datos ingresados... */}
-        {!isValid && isSubmitted && (
-          <div className="row alert alert-danger mensajesAlert">
-            <i className="fa fa-exclamation-sign"></i>
-            Revisar los datos ingresados...
-          </div>
-        )}
-
-      </div>
-    </form>
+       
+        <div className="col-md-3">
+          <label htmlFor="validationDefault04" className="form-label">Barrio</label>
+          <select className="form-select" id="validationDefault04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div className="col-md-3">
+          <label htmlFor="validationDefault05" className="form-label">Codigo Postal</label>
+          <input type="text" className="form-control" id="validationDefault05" required />
+</div>
+        <div className="col-12">
+          <button className="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
   );
 }
+
+export default CrearEnvio;
