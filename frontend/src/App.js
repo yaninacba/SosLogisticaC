@@ -5,8 +5,8 @@ import Inicio from './components/Inicio';
 import Navbar from './components/Navbar';
 import Usuarios from './components/Usuarios';
 import Envios from './components/Envios';
-import camioncito from './imagen/camioncito.jpg';
-import CrearEnvio from './components/CrearEnvio';
+import camioncito from './imagen/camioncito.JPG';
+
 
 
 
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Inicio />} index />
         <Route path="/Envios" element={<Envios />} />
         <Route path="/Usuarios" element={<Usuarios />}/> 
-        <Route path="/CrearEnvio" element={<CrearEnvio />} />
+ 
       
       </Routes>
     </div>

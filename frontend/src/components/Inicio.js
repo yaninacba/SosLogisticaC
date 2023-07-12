@@ -4,7 +4,7 @@ function Inicio() {
 
     return (
     <div>
-        <h1 style={{ textAlign: 'center' }}> SOS LOGISTICA </h1>
+        <h4 style={{ textAlign: 'center' }}> </h4>
     </div>
     );
 }

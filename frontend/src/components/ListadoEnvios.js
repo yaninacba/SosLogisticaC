@@ -9,16 +9,14 @@ import CrearEnvio from './CrearEnvio';
 const ListadoEnvios = ({ lista, eliminarEnvio}) => {
   const [mostrarBuscarEnvio, setMostrarBuscarEnvio] = useState(false);
   const [envioSeleccionado, setEnvioSeleccionado] = useState(null);  
-  const [mostrarCrearEnvio, setMostrarCrearEnvio] = useState(false);
+ 
  
   const ActualizarEnvio = (idEnvio) => {
     setMostrarBuscarEnvio(true);
     setEnvioSeleccionado(idEnvio);
   };
 
-  const mostrarFormularioCrearEnvio = () => {
-    setMostrarCrearEnvio(true);
-  };
+ 
 
 
 
@@ -28,7 +26,7 @@ const ListadoEnvios = ({ lista, eliminarEnvio}) => {
       <h2 style={{textAlign:'center'}}>Listado </h2>
 
       <div>
-      <Link to="/CrearEnvio" className="btn btn-primary">Crear Envío </Link>
+    
    
       </div>
     
@@ -66,9 +64,7 @@ const ListadoEnvios = ({ lista, eliminarEnvio}) => {
           ))}
         </tbody>
       </table>
-      <Switch>
-        <Route path="/CrearEnvio" element={<CrearEnvio />} />
-      </Switch>
+ 
     </div>
 
  
