@@ -24,6 +24,7 @@ function App() {
         <Route path="/" element={<Inicio />} index />
         <Route path="/Envios" element={<Envios />} />
         <Route path="/Usuarios" element={<Usuarios />}/> 
+        <Route path="/CrearEnvio" element={<CrearEnvio />} />
       
       </Routes>
     </div>

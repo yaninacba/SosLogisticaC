@@ -4,13 +4,14 @@ import axios from 'axios';
 
 import ListadoEnvios from './ListadoEnvios'
 import BuscarEnvio from './BuscarEnvio';
-import CrearEnvio from './CrearEnvio';
+
 
 
 const Envios = () => {
   const { register, handleSubmit } = useForm();
   
   const [lista, setLista] = useState(null);
+ 
 
   const onSubmit = async (data) => {
     try {
@@ -39,13 +40,14 @@ const Envios = () => {
     }
   };
 
+  
  
 
 
 
   return (
     <div className="container">
-      <h1>Ruta de Envios</h1>
+      <h1>Consultar Envios</h1>
       <div className="card mb-3">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -70,6 +72,7 @@ const Envios = () => {
         </div>
         {lista && <ListadoEnvios lista={lista} eliminarEnvio={eliminarEnvio} />}
         </div>
+        
     </div>
   );
 };

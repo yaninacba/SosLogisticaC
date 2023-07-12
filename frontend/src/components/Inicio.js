@@ -4,7 +4,7 @@ function Inicio() {
 
     return (
     <div>
-        <h1 style={{ textAlign: 'center' }}> TP DDS 2023 </h1>
+        <h1 style={{ textAlign: 'center' }}> SOS LOGISTICA </h1>
     </div>
     );
 }
