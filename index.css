@@ -1,0 +1,109 @@
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    height: 40vh; 
+
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto centra verticalmente en función del tamaño de la ventana */
+}
+
+.fondo{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+}
+.corner-image {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+  }
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.centradofooter {
+  text-align: center;
+  color: black;
+  
+}
+
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Esto centra verticalmente en función del tamaño de la ventana */
+
+}
+
+
+#what {
+  
+  width: 30px; /* Esto ajusta el ancho máximo de la imagen */
+
+}
+
+
+    .card-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centrar horizontalmente */
+      align-items: center;
+
+    }
+    
+
+    .card {
+     
+      max-width: 20%; /* Las cartas ocuparán todo el ancho de la pantalla */
+      margin: 0; /* Elimina los márgenes para aprovechar todo el espacio */
+      border: none; /* Elimina los bordes si los hay */
+      border-radius: 0; 
+      align-items: center;
+    }
+
+    
+      
+      .card-body {
+        text-align: center;
+        
+      }
+    
+      
+    #moto {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+    }
+    
+   
+    #card-center{
+      display: flex;
+     justify-content: center;
+     align-items: center;
+      margin-top: 20px;
+      height: 40vh; 
+    }
+
+    #cajita{
+      width: 30px;
+    }
+
+  
