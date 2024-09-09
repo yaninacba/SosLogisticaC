@@ -124,10 +124,8 @@
     margin-top: 50px;
     height: 30vh; 
   }
-    .card {
-        width: 100%; /* Hace que la tarjeta use todo el ancho disponible en pantallas pequeñas */
-    }
-    .card-center{
+    
+    #card-center{
         width: 100%;
     }
 }
