@@ -114,7 +114,7 @@
     
     .fondo {
         display: block;
-        width: 40%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
+        width: 30%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
     }
 
     .corner-image {
