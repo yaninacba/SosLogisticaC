@@ -114,11 +114,11 @@
     
     .fondo {
         display: block;
-        width: 50%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
+        width: 30%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
     }
 
     .corner-image {
-        width: 50%; /* Ajusta la imagen para que ocupe todo el ancho en pantallas pequeñas */
+        width: 30%; /* Ajusta la imagen para que ocupe todo el ancho en pantallas pequeñas */
     }
 }
   
