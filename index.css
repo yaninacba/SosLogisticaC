@@ -120,9 +120,15 @@
     .corner-image {
         width: 40%; /* Ajusta la imagen para que ocupe todo el ancho en pantallas pequeñas */
     }
-    center{
+    .center{
     margin-top: 50px;
     height: 30vh; 
   }
+    .card {
+        width: 100%; /* Hace que la tarjeta use todo el ancho disponible en pantallas pequeñas */
+    }
+    card-center{
+        width: 100%;
+    }
 }
   
