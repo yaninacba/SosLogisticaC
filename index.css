@@ -106,4 +106,19 @@
       width: 30px;
     }
 
+/*media */
+@media (max-width: 768px) {
+    #what {
+        width: 50px; /* para celu */
+    }
+    
+    .fondo {
+        display: block;
+        width: 100%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
+    }
+
+    .corner-image {
+        width: 100%; /* Ajusta la imagen para que ocupe todo el ancho en pantallas pequeñas */
+    }
+}
   
