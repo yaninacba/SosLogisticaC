@@ -51,7 +51,7 @@ body {
     position: fixed;
     bottom: 20px; /* Asegura que la imagen esté en la parte inferior */
     right: 20px;  /* Asegura que esté en el margen derecho */
-    width: 150px; /* Ajusta el tamaño de la imagen */
+    width: 100px; /* Ajusta el tamaño de la imagen */
     height: auto;
 }
 
