@@ -1,1 +1,80 @@
 
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+.nav-link {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #ffc107;
+}
+
+/* Centrar tarjetas */
+#card-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Separación entre tarjetas */
+}
+
+/* Tarjetas */
+.card {
+    width: 100%; /* Por defecto ocupa todo el ancho */
+    max-width: 500px; /* Limitar el tamaño máximo */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Tarjeta: hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la tarjeta */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+/* Texto dentro de la tarjeta */
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Pie de la tarjeta */
+.card-footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Reducir el tamaño de la tarjeta en pantallas pequeñas */
+        margin: 10px auto;
+    }
+    .nav-link {
+        font-size: 1rem; /* Reducir tamaño del texto del menú */
+    }
+}
