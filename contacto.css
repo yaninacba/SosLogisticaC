@@ -1,0 +1,74 @@
+/* Navbar personalizado */
+.navbar-custom {
+    background-color: #343a40;
+}
+
+.navbar-custom .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffc107;
+}
+
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+/* Tarjetas */
+.card-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Ajusta la altura para que no quede debajo del navbar */
+}
+
+.card {
+    width: 18rem;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+/* Estilo para la imagen de mensajero */
+#moto {
+    position: fixed;
+    bottom: 20px; /* Asegura que la imagen esté en la parte inferior */
+    right: 20px;  /* Asegura que esté en el margen derecho */
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    /* Puedes ajustar el tamaño de la imagen en pantallas pequeñas */
+    #moto {
+        width: 100px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .card-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
