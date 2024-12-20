@@ -6,6 +6,7 @@ body {
     background-color: #f8f9fa; /* Color de fondo claro */
 }
 
+/* Estilo menu*/
 .navbar-custom {
     background-color: #343a40;
 }
@@ -19,6 +20,10 @@ body {
 
 .navbar-custom .nav-link:hover {
     color: #ffc107;
+}
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
 }
 
 /* Centrado de las tarjetas */
