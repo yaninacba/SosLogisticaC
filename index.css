@@ -26,18 +26,24 @@
 }
 
 /* Imagen de fondo */
+/* Imagen de fondo en la esquina inferior izquierda */
 .fondo {
-    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 150px; /* Ajusta el tamaño según sea necesario */
     height: auto;
+    z-index: -1; /* Asegúrate de que quede detrás del contenido */
 }
 
 /* Imagen en la esquina inferior derecha */
 .corner-image {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     width: 150px; /* Ajusta el tamaño según sea necesario */
     height: auto;
+    z-index: -1; /* Asegúrate de que quede detrás del contenido */
 }
 
 /* Centrado del footer */
