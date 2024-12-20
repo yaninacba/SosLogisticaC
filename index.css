@@ -16,31 +16,50 @@
   height: 100vh; /* Esto centra verticalmente en función del tamaño de la ventana */
 }
 
-.fondo{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 400px;
-}
-.corner-image {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 400px;
-  }
+* Estilo para el navbar */
+        .navbar-custom {
+            background-color: #343a40;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #ffffff;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ffcc00;
+        }
 
-.navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+        /* Centrar el menú */
+        .navbar-nav {
+            justify-content: center;
+            flex-grow: 1;
+        }
 
-.centradofooter {
-  text-align: center;
-  color: black;
-  
-}
+        /* Imagen de fondo */
+        .fondo {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Imagen en la esquina inferior derecha */
+        .corner-image {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 150px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+        }
+
+        /* Centrado del footer */
+        .centradofooter {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Icono de WhatsApp */
+        #what {
+            width: 30px;
+            height: auto;
+        }
 
 
 .container {
@@ -53,11 +72,8 @@
 }
 
 
-#what {
-  
-  width: 30px; /* Esto ajusta el ancho máximo de la imagen */
 
-}
+
 
 
     .card-group {
