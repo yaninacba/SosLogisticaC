@@ -1,4 +1,5 @@
-/* Navbar personalizado */
+* Estilo para el navbar */
+
 .navbar-custom {
     background-color: #343a40;
 }
@@ -13,6 +14,13 @@
 .navbar-custom .nav-link:hover {
     color: #ffc107;
 }
+
+/* Centrar el menú */
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
+}
+
 
 /* Estilo general del body */
 body {
@@ -51,7 +59,7 @@ body {
     position: fixed;
     bottom: 20px; /* Asegura que la imagen esté en la parte inferior */
     right: 20px;  /* Asegura que esté en el margen derecho */
-    width: 100px; /* Ajusta el tamaño de la imagen */
+    width: 150px; /* Ajusta el tamaño de la imagen */
     height: auto;
 }
 
