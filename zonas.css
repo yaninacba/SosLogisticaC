@@ -1,5 +1,4 @@
 
-/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,74 +6,76 @@ body {
     background-color: #f8f9fa; /* Color de fondo claro */
 }
 
-/* Navbar menu */
-.navbar {
-    margin-bottom: 20px;
+.navbar-custom {
+    background-color: #343a40;
 }
-.nav-link {
+
+.navbar-custom .nav-link {
+    color: #ffffff;
     font-size: 1.2rem;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
-.nav-link:hover {
+
+.navbar-custom .nav-link:hover {
     color: #ffc107;
 }
 
-/* Centrar tarjetas */
+/* Centrado de las tarjetas */
 #card-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* Separación entre tarjetas */
+    flex-direction: column;
+    margin: 20px 0; /* Espaciado entre tarjetas */
+    padding-top: 70px; /* Para compensar el navbar fixed-top */
 }
 
 /* Tarjetas */
 .card {
-    width: 100%; /* Por defecto ocupa todo el ancho */
-    max-width: 500px; /* Limitar el tamaño máximo */
+    max-width: 500px; /* Limitar el ancho máximo */
+    width: 90%; /* Ajustar en pantallas pequeñas */
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0; /* Espaciado entre tarjetas */
     background-color: #ffffff;
 }
 
-/* Tarjeta: hover */
+/* Efecto hover en las tarjetas */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Título de la tarjeta */
+/* Títulos y textos */
 .card-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: #343a40;
-    margin-bottom: 10px;
 }
 
-/* Texto dentro de la tarjeta */
 .card-text {
     font-size: 1rem;
     color: #6c757d;
-    margin-bottom: 10px;
 }
 
-/* Pie de la tarjeta */
 .card-footer {
     font-size: 0.9rem;
     color: #6c757d;
     background-color: #f8f9fa;
     border-top: 1px solid #ddd;
+    padding: 10px;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
     .card {
-        width: 90%; /* Reducir el tamaño de la tarjeta en pantallas pequeñas */
-        margin: 10px auto;
+        max-width: 90%; /* Ajustar tamaño de las tarjetas */
     }
+
     .nav-link {
-        font-size: 1rem; /* Reducir tamaño del texto del menú */
+        font-size: 1rem; /* Reducir el tamaño del texto en el navbar */
     }
 }
