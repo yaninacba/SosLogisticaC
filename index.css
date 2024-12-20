@@ -8,15 +8,20 @@
 }
 
 /* Estilo para el navbar */
+
 .navbar-custom {
     background-color: #343a40;
 }
-.navbar-custom .navbar-brand,
+
 .navbar-custom .nav-link {
     color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
+
 .navbar-custom .nav-link:hover {
-    color: #ffcc00;
+    color: #ffc107;
 }
 
 /* Centrar el menú */
