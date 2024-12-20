@@ -1,148 +1,109 @@
-
-
-.center{
+/* Centrar el contenido principal */
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
     height: 40vh; 
-
-}
-.contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Esto centra verticalmente en función del tamaño de la ventana */
 }
 
-* Estilo para el navbar */
-        .navbar-custom {
-            background-color: #343a40;
-        }
-        .navbar-custom .navbar-brand,
-        .navbar-custom .nav-link {
-            color: #ffffff;
-        }
-        .navbar-custom .nav-link:hover {
-            color: #ffcc00;
-        }
+/* Estilo para el navbar */
+.navbar-custom {
+    background-color: #343a40;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff;
+}
+.navbar-custom .nav-link:hover {
+    color: #ffcc00;
+}
 
-        /* Centrar el menú */
-        .navbar-nav {
-            justify-content: center;
-            flex-grow: 1;
-        }
+/* Centrar el menú */
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
+}
 
-        /* Imagen de fondo */
-        .fondo {
-            width: 100%;
-            height: auto;
-        }
+/* Imagen de fondo */
+.fondo {
+    width: 100%;
+    height: auto;
+}
 
-        /* Imagen en la esquina inferior derecha */
-        .corner-image {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            width: 150px; /* Ajusta el tamaño según sea necesario */
-            height: auto;
-        }
+/* Imagen en la esquina inferior derecha */
+.corner-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
 
-        /* Centrado del footer */
-        .centradofooter {
-            text-align: center;
-            margin-top: 20px;
-        }
+/* Centrado del footer */
+.centradofooter {
+    text-align: center;
+    margin-top: 20px;
+}
 
-        /* Icono de WhatsApp */
-        #what {
-            width: 30px;
-            height: auto;
-        }
+/* Icono de WhatsApp */
+#what {
+    width: 30px;
+    height: auto;
+}
 
-
+/* Contenedor general */
 .container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh; /* Esto centra verticalmente en función del tamaño de la ventana */
-
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
 }
 
+/* Estilos de las tarjetas */
+.card-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    max-width: 20%;
+    margin: 0;
+    border: none;
+    border-radius: 0; 
+    align-items: center;
+}
+.card-body {
+    text-align: center;
+}
 
+/* Caja ajustable */
+#cajita {
+    width: 30px;
+}
 
-
-
-
-    .card-group {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Centrar horizontalmente */
-      align-items: center;
-
-    }
-    
-
-    .card {
-     
-      max-width: 20%; /* Las cartas ocuparán todo el ancho de la pantalla */
-      margin: 0; /* Elimina los márgenes para aprovechar todo el espacio */
-      border: none; /* Elimina los bordes si los hay */
-      border-radius: 0; 
-      align-items: center;
-    }
-
-    
-      
-      .card-body {
-        text-align: center;
-        
-      }
-    
-      
-    #moto {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: 200px;
-    }
-    
-   
-    #card-center{
-      display: flex;
-     justify-content: center;
-     align-items: center;
-      margin-top: 20px;
-      height: 40vh; 
-    }
-
-    #cajita{
-      width: 30px;
-    }
-
-/*media */
+/* Media Queries */
 @media (max-width: 768px) {
     #what {
-        width: 50px; /* para celu */
+        width: 50px; /* Ajusta el icono de WhatsApp en pantallas pequeñas */
     }
     
     .fondo {
-        display: block;
-        width: 30%; /* La imagen de fondo ocupa todo el ancho de la pantalla */
+        width: 100%; /* La imagen de fondo ocupa todo el ancho */
     }
 
     .corner-image {
-        width: 40%; /* Ajusta la imagen para que ocupe todo el ancho en pantallas pequeñas */
+        width: 100px; /* Ajusta el tamaño para pantallas pequeñas */
     }
-    .center{
-    margin-top: 50px;
-    height: 30vh; 
-  }
+
+    .center {
+        margin-top: 50px;
+        height: 30vh; 
+    }
     
-    #card-center{
+    #card-center {
         width: 100%;
     }
 }
-  
