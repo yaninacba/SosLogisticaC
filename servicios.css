@@ -14,6 +14,12 @@
     color: #ffcc00;
 }
 
+/* Centrar el menú */
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
+}
+
 /* Estilos para las tarjetas */
 .card-group {
     display: flex;
