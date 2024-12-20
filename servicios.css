@@ -1,0 +1,14 @@
+.navbar-custom {
+    background-color: #343a40;
+}
+
+.navbar-custom .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffc107;
+}
