@@ -1,5 +1,4 @@
-* Estilo para el navbar */
-
+/* Estilo menu*/
 .navbar-custom {
     background-color: #343a40;
 }
@@ -14,7 +13,10 @@
 .navbar-custom .nav-link:hover {
     color: #ffc107;
 }
-
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
+}
 /* Centrar el menú */
 .navbar-nav {
     justify-content: center;
