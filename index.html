@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
- 
-    
 </head>
 
 <body>
@@ -58,22 +56,25 @@
         </footer>
     </div>
 
+    <!-- Incluir Bootstrap JS antes de cerrar el body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let navLinks = document.querySelectorAll(".nav-link");
-        let navbarToggler = document.querySelector(".navbar-toggler");
 
-        navLinks.forEach(function (link) {
-            link.addEventListener("click", function () {
-                let navbarCollapse = document.querySelector(".navbar-collapse");
-                if (navbarCollapse.classList.contains("show")) {
-                    navbarToggler.click(); // Cierra el menú después de hacer clic en un enlace
-                }
+    <!-- Tu código JavaScript aquí -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let navLinks = document.querySelectorAll(".nav-link");
+            let navbarToggler = document.querySelector(".navbar-toggler");
+
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    let navbarCollapse = document.querySelector(".navbar-collapse");
+                    if (navbarCollapse.classList.contains("show")) {
+                        navbarToggler.click(); // Cierra el menú después de hacer clic en un enlace
+                    }
+                });
             });
         });
-    });
-
-
+    </script>
 </body>
 </html>
+
