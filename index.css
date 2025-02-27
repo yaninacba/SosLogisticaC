@@ -117,4 +117,24 @@
     #card-center {
         width: 100%;
     }
+
+.navbar-toggler {
+    border-color: #ffffff; /* Asegura que el borde del botón sea visible */
 }
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Cambia el color del icono si no se ve bien */
+}
+    
+.navbar-nav {
+    flex-grow: unset; /* Evita que el menú se expanda completamente */
+    text-align: center; /* Asegura que los elementos queden alineados */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: block;
+        width: 100%;
+    }
+}
+
