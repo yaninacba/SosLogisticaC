@@ -18,6 +18,7 @@
 .navbar-nav {
     justify-content: center;
     flex-grow: 1;
+    flex-direction: row; /*menu en fila*/
 }
 
 /* Estilos para las tarjetas */
@@ -50,5 +51,8 @@
     .card {
         width: 90%;
         margin-bottom: 20px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
     }
 }
