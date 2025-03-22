@@ -97,11 +97,12 @@
 }
 
 /* Media Queries */
+/* Media Queries */
 @media (max-width: 768px) {
     #what {
         width: 50px; /* Ajusta el icono de WhatsApp en pantallas pequeñas */
     }
-    
+
     .fondo {
         width: 100%; /* La imagen de fondo ocupa todo el ancho */
     }
@@ -119,30 +120,21 @@
         width: 100%;
     }
 
-.navbar-toggler {
-    border-color: #ffffff; /* Asegura que el borde del botón sea visible */
-}
-
-.navbar-toggler-icon {
-    background-color: #ffffff; /* Cambia el color del icono si no se ve bien */
-}
-    
-.navbar-nav {
-    flex-grow: unset; /* Evita que el menú se expanda completamente */
-    text-align: center; /* Asegura que los elementos queden alineados */
-}
-
-
+    /* Estilos del Navbar */
+    .navbar-toggler {
+        display: none; /* Ocultamos el botón hamburguesa */
+    }
 
     .navbar-nav {
-        display: flex; /* Mantiene los elementos en fila */
-        flex-direction: row; /* Asegura que estén alineados horizontalmente */
-        justify-content: center; /* Centra los enlaces */
+        display: flex !important; /* Forzamos que el menú sea horizontal */
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
     }
 
     .navbar-nav .nav-link {
         font-size: 1rem; /* Reduce el tamaño del texto */
         padding: 5px 8px; /* Ajusta el espacio entre los elementos */
+        white-space: nowrap; /* Evita que los enlaces se partan en varias líneas */
     }
 }
