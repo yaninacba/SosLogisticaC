@@ -28,6 +28,7 @@
 .navbar-nav {
     justify-content: center;
     flex-grow: 1;
+    flex-direction: row; /*menu en fila*/
 }
 
 /* Imagen de fondo */
