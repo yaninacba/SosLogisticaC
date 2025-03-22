@@ -16,6 +16,7 @@
 .navbar-nav {
     justify-content: center;
     flex-grow: 1;
+    flex-direction: row;
 }
 /* Centrar el menú */
 .navbar-nav {
@@ -55,7 +56,9 @@ body {
 .card-footer {
     text-align: center;
 }
-
+.navbar-nav .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
+}
 /* Estilo para la imagen de mensajero */
 #moto {
     position: fixed;
