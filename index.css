@@ -131,6 +131,9 @@
     text-align: center; /* Asegura que los elementos queden alineados */
 }
 
+.navbar-nav .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
+}
 @media (max-width: 768px) {
     .navbar-nav {
         display: block;
