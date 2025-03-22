@@ -135,10 +135,16 @@
 .navbar-nav .nav-link {
         font-size: 1rem; /* Reduce el tamaño en móviles */
 }
-@media (max-width: 768px) {
+
     .navbar-nav {
-        display: block;
+        display: flex; /* ✅ Mantiene los elementos en fila */
+        flex-direction: row; /* ✅ Asegura que estén alineados horizontalmente */
+        justify-content: center; /* ✅ Centra los enlaces */
         width: 100%;
     }
-}
 
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        padding: 5px 8px; /* Ajusta el espacio entre los elementos */
+    }
+}
