@@ -24,6 +24,7 @@ body {
 .navbar-nav {
     justify-content: center;
     flex-grow: 1;
+    flex-direction:row;
 }
 
 /* Centrado de las tarjetas */
@@ -82,5 +83,8 @@ body {
 
     .nav-link {
         font-size: 1rem; /* Reducir el tamaño del texto en el navbar */
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
     }
 }
