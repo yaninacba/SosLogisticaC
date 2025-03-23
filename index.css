@@ -30,7 +30,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    flex-wrap: nowrap; /* Evita que se rompa en varias líneas */
+    flex-wrap: wrap; /* Evita que se rompa en varias líneas */
 }
 
 .navbar-nav .nav-item {
@@ -135,5 +135,17 @@
     #card-center {
         width: 100%;
     }
+ .navbar-nav {
+        display: none; /* Ocultar los elementos de navegación por defecto */
+        width: 100%;
+        flex-direction: column; /* Asegurar que los enlaces se alineen verticalmente */
+    }
 
+    .navbar-nav.show {
+        display: flex; /* Mostrar el menú cuando la clase 'show' está activa */
+    }
+
+    .navbar-toggler {
+        display: block; /* Mostrar el botón hamburguesa */
+    }
 }
