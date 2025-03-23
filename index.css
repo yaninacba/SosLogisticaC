@@ -26,14 +26,15 @@
 
 /* Centrar el menú */
 .navbar-nav {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    flex-wrap: nowrap; /* Evita que se rompa en varias líneas */
 }
 
 .navbar-nav .nav-item {
-    margin: 0 10px; /* Espaciado entre los elementos */
+    margin: 0 10px;
 }
 
 .navbar-nav .nav-link {
@@ -137,11 +138,11 @@
 
     /* Estilos del Navbar */
     .navbar-toggler {
-        display: none; /* Ocultamos el botón hamburguesa */
+        display: block; /* Ocultamos el botón hamburguesa */
     }
 
     .navbar-nav {
-        display: flex !important; /* Forzamos que el menú sea horizontal */
+        display: flex ;
         flex-direction: row;
         justify-content: center;
         width: 100%;
