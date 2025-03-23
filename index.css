@@ -136,23 +136,4 @@
         width: 100%;
     }
 
-    /* Estilos del Navbar */
-    .navbar-toggler {
-        display: block; /* Ocultamos el botón hamburguesa */
-    }
-
-    .navbar-nav {
-        display: flex ;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap; 
-        }
-   
-
-    .navbar-nav .nav-link {
-        font-size: 1rem; /* Reduce el tamaño del texto */
-        padding: 5px 8px; /* Ajusta el espacio entre los elementos */
-        white-space: nowrap; /* Evita que los enlaces se partan en varias líneas */
-    }
 }
