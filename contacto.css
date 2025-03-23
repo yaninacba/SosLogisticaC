@@ -84,15 +84,13 @@ body {
         width: 100%;
         margin: 10px 0;
     }
-    .navbar-nav {
-        display: flex; /* ✅ Mantiene los elementos en fila */
-        flex-direction: row; /* ✅ Asegura que estén alineados horizontalmente */
-        justify-content: center; /* ✅ Centra los enlaces */
-        width: 100%;
+  .navbar-nav {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
     }
 
-    .navbar-nav .nav-link {
-        font-size: 1rem; /* Reduce el tamaño del texto */
-        padding: 5px 8px; /* Ajusta el espacio entre los elementos */
+    .navbar-custom .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
+        padding: 10px 0; /* Añade espacio entre los elementos del menú */
     }
 }
