@@ -9,6 +9,7 @@
 
 /* Estilo para el navbar */
 
+/* Navbar personalizado */
 .navbar-custom {
     background-color: #343a40;
 }
@@ -21,33 +22,21 @@
 }
 
 .navbar-custom .nav-link:hover {
-    color: #ffc107;
+    color: #ffcc00;
+}
+.navbar-toggler {
+    border: none; /* Quita el borde del botón */
+    padding: 0.5rem;
 }
 
 /* Centrar el menú */
+
 .navbar-nav {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    width: 100%;
-    flex-wrap: wrap; /* Evita que se rompa en varias líneas */
+    flex-grow: 1;
+    flex-direction: row; /*menu en fila*/
 }
 
-.navbar-nav .nav-item {
-    margin: 0 10px;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    padding: 5px 10px;
-    white-space: nowrap;
-}
-
-  
-
-
-
-/* Imagen de fondo */
 /* Imagen de fondo en la esquina inferior izquierda */
 .fondo {
     position: fixed;
@@ -136,16 +125,13 @@
         width: 100%;
     }
  .navbar-nav {
-        display: none; /* Ocultar los elementos de navegación por defecto */
-        width: 100%;
-        flex-direction: column; /* Asegurar que los enlaces se alineen verticalmente */
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
     }
 
-    .navbar-nav.show {
-        display: flex; /* Mostrar el menú cuando la clase 'show' está activa */
+    .navbar-custom .nav-link {
+        font-size: 1rem; /* Reduce el tamaño en móviles */
+        padding: 10px 0; /* Añade espacio entre los elementos del menú */
     }
 
-    .navbar-toggler {
-        display: block; /* Mostrar el botón hamburguesa */
-    }
 }
