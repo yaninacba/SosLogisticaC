@@ -52,7 +52,13 @@
         width: 90%;
         margin-bottom: 20px;
     }
-    .navbar-nav .nav-link {
+    .navbar-nav {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .navbar-custom .nav-link {
         font-size: 1rem; /* Reduce el tamaño en móviles */
+        padding: 10px 0; /* Añade espacio entre los elementos del menú */
     }
 }
