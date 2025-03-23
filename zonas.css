@@ -81,10 +81,13 @@ body {
         max-width: 90%; /* Ajustar tamaño de las tarjetas */
     }
 
-    .nav-link {
-        font-size: 1rem; /* Reducir el tamaño del texto en el navbar */
+    .navbar-nav {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
     }
-    .navbar-nav .nav-link {
+
+    .navbar-custom .nav-link {
         font-size: 1rem; /* Reduce el tamaño en móviles */
+        padding: 10px 0; /* Añade espacio entre los elementos del menú */
     }
 }
