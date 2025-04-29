@@ -1,14 +1,15 @@
-const functions = require('firebase-functions');
-const { WebhookClient } = require('dialogflow-fulfillment');
+document.addEventListener('df-messenger-loaded', () => {
+  const dfMessenger = document.querySelector('df-messenger');
+  
+  // Ejemplo: Guardar mensajes en Firebase
+  dfMessenger.addEventListener('df-response-received', (event) => {
+    const userMessage = event.detail.response.queryText;
+    const botReply = event.detail.response.fulfillmentText;
 
-exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
-  const agent = new WebhookClient({ request, response });
-
-  function saludo(agent) {
-    agent.add("¡Hola desde Firebase!");
-  }
-
-  let intentMap = new Map();
-  intentMap.set('Saludo', saludo);
-  agent.handleRequest(intentMap);
-});
+    // Guardar en Firestore (colección 'chat-logs')
+    db.collection('chat-logs').add({
+      userMessage: userMessage,
+      botReply: botReply,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }).catch(error => console.error("Error al guardar:", error));
+  });
