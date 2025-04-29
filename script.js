@@ -6,11 +6,9 @@ async function sendMessage() {
     const message = userInput.value;
     if (!message) return;
 
-    // Mostrar mensaje del usuario
     chatbox.innerHTML += `<p><strong>Tú:</strong> ${message}</p>`;
     userInput.value = "";
 
-    // Llamar a la API de DeepSeek
     try {
         const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
             method: "POST",
@@ -20,16 +18,19 @@ async function sendMessage() {
             },
             body: JSON.stringify({
                 model: "deepseek-chat",
-                messages: [{ role: "user", content: message }],
-                temperature: 0.7
+                messages: [{ role: "user", content: message }]
             })
         });
 
         const data = await response.json();
-        const reply = data.choices[0].message.content;
+        console.log(data); // ¡Verifica la estructura real aquí!
+
+        // Versión segura (evita errores si la estructura cambia):
+        const reply = data?.choices?.[0]?.message?.content || "No pude obtener una respuesta. Revisa la consola.";
         chatbox.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
     } catch (error) {
         chatbox.innerHTML += `<p style="color: red;">Error: ${error.message}</p>`;
+        console.error("Detalles del error:", error);
     }
 }
 
