@@ -60,11 +60,31 @@
                 <img id="what" src="what.png" alt="logodewhatsaap">
             </a>
         </footer>
+        <!-- Contenedor Chat -->
+<div id="chatbot-container" style="margin: 20px 0; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+    <h3>Chatbot IA</h3>
+    <div id="chatbox" style="height: 200px; overflow-y: scroll; margin-bottom: 10px; padding: 10px; background: #f9f9f9;"></div>
+    <div style="display: flex;">
+        <input 
+            type="text" 
+            id="userInput" 
+            placeholder="¿En que puedo ayudarte?..." 
+            style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"
+        >
+        <button 
+            onclick="sendMessage()" 
+            style="margin-left: 5px; padding: 8px 15px; background: #6200ea; color: white; border: none; border-radius: 4px; cursor: pointer;"
+        >
+            Enviar
+        </button>
+    </div>
+</div>
+
     </div>
 
     <!-- Incluir Bootstrap JS antes de cerrar el body -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
 
