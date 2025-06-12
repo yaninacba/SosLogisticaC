@@ -42,7 +42,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 150px; /* Ajusta el tamaño según sea necesario */
+    width: 200px; /* Ajusta el tamaño según sea necesario */
     height: auto;
     z-index: -1; /* Asegúrate de que quede detrás del contenido */
 }
@@ -113,7 +113,7 @@
     }
 
     .corner-image {
-        width: 100px; /* Ajusta el tamaño para pantallas pequeñas */
+        width: 150px; /* Ajusta el tamaño para pantallas pequeñas */
     }
 
     .center {
